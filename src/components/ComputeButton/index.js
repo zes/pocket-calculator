@@ -1,1 +1,1 @@
-export { default } from './ComputeButton.component';
+export { default } from './ComputeButton.container';

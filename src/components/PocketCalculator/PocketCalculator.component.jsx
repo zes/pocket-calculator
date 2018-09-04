@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ComputeButton from '../ComputeButton';
 import './PocketCalculator.css';
+import OperationLabel from '../OperationLabel/OperationLabel.container';
 
 class PocketCalculator extends Component {
   render() {
@@ -20,6 +21,7 @@ class PocketCalculator extends Component {
         <ComputeButton value="*" />
         <ComputeButton value="." />
         <ComputeButton value="/" />
+        <OperationLabel />
       </div>
     );
   }
