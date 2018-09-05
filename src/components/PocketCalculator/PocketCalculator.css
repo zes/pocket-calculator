@@ -9,6 +9,7 @@
   grid-template-areas:
     ". . . . . ."
     ". operation operation operation operation ."
+    ". result result result result ."
     ". one two three add ."
     ". four five six sub ."
     ". seven eight nine mult ."
@@ -16,7 +17,7 @@
     ". equal equal equal equal ."
     ". . . . . .";
   grid-template-columns: auto repeat(4, 50px) auto;
-  grid-template-rows: auto repeat(6, 50px) auto;
+  grid-template-rows: auto repeat(2, 25px) repeat(5, 50px) auto;
   height: 100%;
   justify-items: end;
 }
@@ -60,6 +61,10 @@
 
 .point {
   grid-area: point;
+}
+
+.result {
+  grid-area: result;
 }
 
 .seven {

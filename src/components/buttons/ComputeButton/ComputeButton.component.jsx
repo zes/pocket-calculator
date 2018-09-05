@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import './ComputeButton.css';
+import '../button.css';
 
 export default class ComputeButton extends PureComponent {
   onClick = () => {
