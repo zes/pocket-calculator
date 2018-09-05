@@ -22,6 +22,10 @@
   justify-items: end;
 }
 
+.clear {
+  grid-area: clear;
+}
+
 .divi {
   grid-area: divi;
 }

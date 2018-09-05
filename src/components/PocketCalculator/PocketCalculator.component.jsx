@@ -4,6 +4,7 @@ import './PocketCalculator.css';
 import OperationLabel from '../labels/OperationLabel/OperationLabel.container';
 import ResultButton from '../buttons/ResultButton/ResultButton.container';
 import ResultLabel from '../labels/ResultLabel/ResultLabel.container';
+import ClearButton from '../buttons/ClearButton/ClearButton.container';
 
 class PocketCalculator extends Component {
   render() {
@@ -27,6 +28,7 @@ class PocketCalculator extends Component {
         <ComputeButton value="." className="point" />
         <ComputeButton value="/" className="divi" />
         <ResultButton className="equal" />
+        <ClearButton className="clear" />
       </div>
     );
   }
