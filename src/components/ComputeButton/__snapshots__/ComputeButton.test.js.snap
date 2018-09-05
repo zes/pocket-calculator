@@ -2,7 +2,7 @@
 
 exports[`[Component] <ComputeButton /> renders a snapshot 1`] = `
 <button
-  className="button"
+  className="button x"
   onClick={[Function]}
   type="button"
 >

@@ -6,21 +6,22 @@ import OperationLabel from '../OperationLabel/OperationLabel.container';
 class PocketCalculator extends Component {
   render() {
     return (
-      <div>
-        <ComputeButton value="1" />
-        <ComputeButton value="2" />
-        <ComputeButton value="3" />
-        <ComputeButton value="+" />
-        <ComputeButton value="4" />
-        <ComputeButton value="5" />
-        <ComputeButton value="6" />
-        <ComputeButton value="-" />
-        <ComputeButton value="7" />
-        <ComputeButton value="8" />
-        <ComputeButton value="9" />
-        <ComputeButton value="*" />
-        <ComputeButton value="." />
-        <ComputeButton value="/" />
+      <div className="calculator">
+        <ComputeButton value="1" className="one" />
+        <ComputeButton value="2" className="two" />
+        <ComputeButton value="3" className="three" />
+        <ComputeButton value="+" className="add" />
+        <ComputeButton value="4" className="four" />
+        <ComputeButton value="5" className="five" />
+        <ComputeButton value="6" className="six" />
+        <ComputeButton value="-" className="sub" />
+        <ComputeButton value="7" className="seven" />
+        <ComputeButton value="8" className="eight" />
+        <ComputeButton value="9" className="nine" />
+        <ComputeButton value="*" className="mult" />
+        <ComputeButton value="0" className="zero" />
+        <ComputeButton value="." className="point" />
+        <ComputeButton value="/" className="divi" />
         <OperationLabel />
       </div>
     );

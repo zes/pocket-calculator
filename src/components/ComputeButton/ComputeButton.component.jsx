@@ -9,10 +9,10 @@ export default class ComputeButton extends PureComponent {
   };
 
   render() {
-    const { value } = this.props;
-
+    const { className, value } = this.props;
+    const buttonClassName = `button ${className}`;
     return (
-      <button type="button" className="button" onClick={this.onClick}>
+      <button type="button" className={buttonClassName} onClick={this.onClick}>
         {value}
       </button>
     );
@@ -20,6 +20,7 @@ export default class ComputeButton extends PureComponent {
 }
 
 ComputeButton.propTypes = {
+  className: PropTypes.string.isRequired,
   updateOperation: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
 };

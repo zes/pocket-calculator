@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import './Operation.css';
 
 export default class OperationLabel extends PureComponent {
   render() {
     const { operation } = this.props;
 
-    return <span>{operation}</span>;
+    return <span className="operation">{operation}</span>;
   }
 }
 

@@ -1,0 +1,87 @@
+.add {
+  grid-area: add;
+}
+
+.calculator {
+  align-items: center;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-areas:
+    ". . . . . ."
+    ". operation operation operation operation ."
+    ". one two three add ."
+    ". four five six sub ."
+    ". seven eight nine mult ."
+    ". clear zero point divi ."
+    ". equal equal equal equal ."
+    ". . . . . .";
+  grid-template-columns: auto repeat(4, 50px) auto;
+  grid-template-rows: auto repeat(6, 50px) auto;
+  height: 100%;
+  justify-items: end;
+}
+
+.divi {
+  grid-area: divi;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.equal {
+  grid-area: equal;
+}
+
+.five {
+  grid-area: five;
+}
+
+
+.four {
+  grid-area: four;
+}
+
+.mult {
+  grid-area: mult;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.one {
+  grid-area: one;
+}
+
+.operation {
+  grid-area: operation;
+}
+
+.point {
+  grid-area: point;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.six {
+  grid-area: six;
+}
+
+.sub {
+  grid-area: sub;
+}
+
+.three {
+  grid-area: three;
+}
+
+.two {
+  grid-area: two;
+}
+
+.zero {
+  grid-area: zero;
+}

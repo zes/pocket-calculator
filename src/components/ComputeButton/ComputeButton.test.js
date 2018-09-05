@@ -8,6 +8,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('[Component] <ComputeButton />', () => {
   const props = {
+    className: 'x',
     value: '2',
     updateOperation: jest.fn(),
   };
