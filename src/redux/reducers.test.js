@@ -1,5 +1,10 @@
 import reducer, { initialState } from './reducers';
-import { CLEAR_OUTPUTS, GET_RESULT, UPDATE_OPERATION } from './actions';
+import {
+  CLEAR_OUTPUTS,
+  GET_RESULT,
+  TOGGLE_DISPLAY_LIST,
+  UPDATE_OPERATION,
+} from './actions';
 
 describe('Reducers', () => {
   it('should return the initialState if no state is given', () => {
@@ -25,6 +30,7 @@ describe('Reducers', () => {
   it('should handle GET_RESULT', () => {
     const state = {
       operation: '45+78',
+      operationsList: [{ operation: '4+7', result: '11' }],
       result: '',
     };
     expect(
@@ -33,7 +39,22 @@ describe('Reducers', () => {
       }),
     ).toEqual({
       ...state,
+      operationsList: [
+        { operation: '4+7', result: '11' },
+        { operation: '45+78', result: '123' },
+      ],
       result: '123',
+    });
+  });
+
+  it('should handle TOGGLE_DISPLAY_LIST', () => {
+    expect(
+      reducer(initialState, {
+        type: TOGGLE_DISPLAY_LIST,
+      }),
+    ).toEqual({
+      ...initialState,
+      displayList: true ,
     });
   });
 
