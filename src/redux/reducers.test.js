@@ -3,6 +3,7 @@ import {
   CLEAR_OUTPUTS,
   GET_RESULT,
   TOGGLE_DISPLAY_LIST,
+  TOGGLE_MONKEY_BUSINESS,
   UPDATE_OPERATION,
 } from './actions';
 
@@ -54,7 +55,18 @@ describe('Reducers', () => {
       }),
     ).toEqual({
       ...initialState,
-      displayList: true ,
+      displayList: true,
+    });
+  });
+
+  it('should handle TOGGLE_MONKEY_BUSINESS', () => {
+    expect(
+      reducer(initialState, {
+        type: TOGGLE_MONKEY_BUSINESS,
+      }),
+    ).toEqual({
+      ...initialState,
+      isMonkeyBusiness: true,
     });
   });
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ClearButton from '../buttons/ClearButton';
 import ComputeButton from '../buttons/ComputeButton';
 import DisplayListButton from '../buttons/DisplayListButton';
@@ -8,7 +9,22 @@ import ResultButton from '../buttons/ResultButton';
 import ResultLabel from '../labels/ResultLabel';
 import './PocketCalculator.css';
 
-class PocketCalculator extends Component {
+export default class PocketCalculator extends Component {
+  componentWillMount() {
+    document.addEventListener('keydown', this.handleKeyDown);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeyDown);
+  }
+
+  handleKeyDown = keyEvent => {
+    const { isMonkeyBusiness, monkeyBusiness } = this.props;
+    if (keyEvent.which === 32) {
+      monkeyBusiness(!isMonkeyBusiness);
+    }
+  };
+
   render() {
     return (
       <div className="calculator">
@@ -38,4 +54,7 @@ class PocketCalculator extends Component {
   }
 }
 
-export default PocketCalculator;
+PocketCalculator.propTypes = {
+  isMonkeyBusiness: PropTypes.bool.isRequired,
+  monkeyBusiness: PropTypes.func.isRequired,
+};

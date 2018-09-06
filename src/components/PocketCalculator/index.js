@@ -1,1 +1,1 @@
-export { default } from './PocketCalculator.component';
+export { default } from './PocketCalculator.container';

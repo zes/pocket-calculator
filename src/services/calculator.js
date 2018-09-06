@@ -1,4 +1,9 @@
 import * as math from 'mathjs';
+import _ from 'lodash';
+
+const operationChars = ['+', '-', '/', '*'];
+
+export const getFinancialNumber = value => Number.parseFloat(value).toFixed(2);
 
 export const calculate = operation => {
   try {
@@ -18,4 +23,9 @@ export const calculate = operation => {
   }
 };
 
-export default { calculate };
+export const getRandomOperation = () =>
+  `${getFinancialNumber(_.random(100, true))}${_.sample(
+    operationChars,
+  )}${getFinancialNumber(_.random(100, true))}`;
+
+export default { calculate, getRandomOperation };

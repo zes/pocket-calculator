@@ -1,6 +1,19 @@
-import { calculate } from './calculator';
+import { calculate, getFinancialNumber } from './calculator';
 
 describe('[Service] Calculator', () => {
+  describe('getFinancialNumber', () => {
+    [
+      { expectedResult: '47.00', value: '47' },
+      { expectedResult: '45.50', value: '45.5' },
+      { expectedResult: '45.80', value: '45.798' },
+    ].forEach(({ expectedResult, value }) => {
+      it(`with ${value} should return ${expectedResult}`, () => {
+        const result = getFinancialNumber(value);
+        expect(result).toBe(expectedResult);
+      });
+    });
+  });
+
   describe('calculate', () => {
     [
       { expectedResult: '', operation: '' },
