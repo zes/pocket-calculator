@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import './ResultLabel.css';
+import GenericLabel from '../GenericLabel/GenericLabel.component';
 
 export default class ResultLabel extends PureComponent {
   render() {
     const { result } = this.props;
 
-    return <span className="result">{result}</span>;
+    return <GenericLabel className="result" value={result} />;
   }
 }
 

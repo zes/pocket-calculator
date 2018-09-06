@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import './Operation.css';
+import GenericLabel from '../GenericLabel/GenericLabel.component';
 
 export default class OperationLabel extends PureComponent {
   render() {
     const { operation } = this.props;
 
-    return <span className="operation">{operation}</span>;
+    return <GenericLabel className="operation" value={operation} />;
   }
 }
 
