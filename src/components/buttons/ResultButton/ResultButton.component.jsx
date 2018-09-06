@@ -1,25 +1,16 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import '../button.css';
+import GenericButton from '../GenericButton';
 
 export default class ResultButton extends PureComponent {
-  onClick = () => {
-    const { getResult } = this.props;
-    getResult();
-  };
-
   render() {
-    const { className } = this.props;
-    const buttonClassName = `button ${className}`;
+    const { getResult } = this.props;
     return (
-      <button type="button" className={buttonClassName} onClick={this.onClick}>
-        =
-      </button>
+      <GenericButton action={() => getResult()} className="equal" value="=" />
     );
   }
 }
 
 ResultButton.propTypes = {
-  className: PropTypes.string.isRequired,
   getResult: PropTypes.func.isRequired,
 };

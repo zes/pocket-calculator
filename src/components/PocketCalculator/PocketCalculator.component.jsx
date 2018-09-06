@@ -27,8 +27,8 @@ class PocketCalculator extends Component {
         <ComputeButton value="0" className="zero" />
         <ComputeButton value="." className="point" />
         <ComputeButton value="/" className="divi" />
-        <ResultButton className="equal" />
-        <ClearButton className="clear" />
+        <ResultButton />
+        <ClearButton />
       </div>
     );
   }

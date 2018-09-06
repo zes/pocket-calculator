@@ -1,20 +1,16 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import '../button.css';
+import GenericButton from '../GenericButton';
 
 export default class ComputeButton extends PureComponent {
-  onClick = () => {
-    const { updateOperation, value } = this.props;
-    updateOperation(value);
-  };
-
   render() {
-    const { className, value } = this.props;
-    const buttonClassName = `button ${className}`;
+    const { className, updateOperation, value } = this.props;
     return (
-      <button type="button" className={buttonClassName} onClick={this.onClick}>
-        {value}
-      </button>
+      <GenericButton
+        action={() => updateOperation(value)}
+        className={className}
+        value={value}
+      />
     );
   }
 }
