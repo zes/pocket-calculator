@@ -1,21 +1,22 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { PureComponent } from 'react';
+import { Provider } from 'react-redux';
+import PropTypes from 'prop-types';
 
-class App extends Component {
+import PocketCalculator from './components/PocketCalculator';
+
+class App extends PureComponent {
   render() {
+    const { store } = this.props;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Provider store={store}>
+        <PocketCalculator />
+      </Provider>
     );
   }
 }
+
+App.propTypes = {
+  store: PropTypes.object.isRequired, // eslint-disable-line
+};
 
 export default App;

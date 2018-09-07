@@ -1,0 +1,104 @@
+.add {
+  grid-area: add;
+}
+
+.calculator {
+  align-items: center;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-areas:
+    ". . . . . . ."
+    ". listbutton operation operation operation operation ."
+    ". . result result result result ."
+    "list list one two three add ."
+    "list list four five six sub ."
+    "list list seven eight nine mult ."
+    "list list clear zero point divi ."
+    "list list equal equal equal equal ."
+    ". . . . . . .";
+  grid-template-columns: 1fr repeat(5, 50px) 1fr;
+  grid-template-rows: 1fr repeat(2, 25px) repeat(5, 50px) 1fr;
+  height: 100%;
+  justify-items: end;
+}
+
+.clear {
+  grid-area: clear;
+}
+
+.divi {
+  grid-area: divi;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.equal {
+  grid-area: equal;
+}
+
+.five {
+  grid-area: five;
+}
+
+
+.four {
+  grid-area: four;
+}
+
+.list {
+  grid-area: list;
+}
+
+.listbutton {
+  grid-area: listbutton;
+}
+
+.mult {
+  grid-area: mult;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.one {
+  grid-area: one;
+}
+
+.operation {
+  grid-area: operation;
+}
+
+.point {
+  grid-area: point;
+}
+
+.result {
+  grid-area: result;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.six {
+  grid-area: six;
+}
+
+.sub {
+  grid-area: sub;
+}
+
+.three {
+  grid-area: three;
+}
+
+.two {
+  grid-area: two;
+}
+
+.zero {
+  grid-area: zero;
+}

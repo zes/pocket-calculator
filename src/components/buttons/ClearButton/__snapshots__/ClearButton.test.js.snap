@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Component] <ClearButton /> renders a snapshot 1`] = `
+<button
+  className="button clear"
+  onClick={[Function]}
+  type="button"
+>
+  C
+</button>
+`;
